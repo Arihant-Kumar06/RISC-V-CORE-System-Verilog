@@ -24,6 +24,10 @@ initial begin
 end
 
 initial begin 
+
+    $dumpfile("pc_test.vcd");
+    $dumpvars(0, pc_tb);
+
     reset = 1;
     #10;
     reset = 0 ;
@@ -40,6 +44,8 @@ initial begin
 
     $display("Simulation Finished.");
     $finish;
+
+   
 end
 
 initial begin
